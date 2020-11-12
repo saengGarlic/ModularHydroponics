@@ -1,6 +1,6 @@
 import sys
 import os
-from ModularHydroponics import menu
+from . import menu
 
 
 #시간나면 Inquirer 써서 해볼수도

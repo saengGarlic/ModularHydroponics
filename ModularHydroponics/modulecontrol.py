@@ -2,7 +2,17 @@ import smbus
 import time
 import pandas as pd
 import RPi.GPIO as GPIO
-from ModularHydroponics import dbtask
+from . import dbtask
+
+class Module(object):
+    modulenest = {}
+    autocon = {}
+    sensors = []
+
+    def __init__(self, busnum):
+        self.bus = smbus.SMBus(busnum)
+        self.df = pd.read_csv('moduledata.csv')
+        self.index = list(self.df)
 
 
 class ModuleControl(object):

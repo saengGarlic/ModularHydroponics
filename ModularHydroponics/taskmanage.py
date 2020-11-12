@@ -17,11 +17,11 @@ class _Operation(threading.Thread):
 
 
 class OperationQueue:
-    def __init__(self, numberOfConcurrentTask=1, qsem=None):
+    def __init__(self, numberOfConcurrentTask=1, **kwargs):
         self.queue = queue.Queue()
         self.reservequeue = queue.Queue()
         self.sem = threading.Semaphore(numberOfConcurrentTask)
-        self.qsem = qsem
+        self.qsem = kwargs.pop('qsem', None)
         self.t = ''
         self.stoploop = False
 
