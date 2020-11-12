@@ -2,7 +2,7 @@ import smbus
 import time
 import pandas as pd
 import RPi.GPIO as GPIO
-from . import dbtask
+from ModularHydroponics2.ModularHydroponics import dbtask
 
 class Module(object):
     modulenest = {}

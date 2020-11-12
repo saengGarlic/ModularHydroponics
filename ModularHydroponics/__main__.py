@@ -1,4 +1,4 @@
-from . import interface, menu, taskmanage, modulecontrol, gpiocontrol
+from ModularHydroponics2.ModularHydroponics import interface, menu, taskmanage, modulecontrol, gpiocontrol
 import threading
 import time
 import random
